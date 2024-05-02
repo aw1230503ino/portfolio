@@ -1,0 +1,232 @@
+@charset "utf-8";
+#all{
+    padding: 0 10%;
+}
+h1 {
+    font-family: serif;
+    font-size: 70px;
+}
+
+h2 {
+    font-family: serif;
+    font-size: 50px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 15px;
+}
+
+#main {
+    padding: 0 100px;
+    display: flex;
+    margin-top: 120px;
+}
+#main img {
+    margin-right: 0;
+    margin-left: auto;
+    width: 55%;
+    height: auto;   
+}
+#sub{
+    padding: 0 15%;
+}
+.sub1,.sub2,.sub3{
+    display: flex;
+    font-size: 15px;
+    align-items: first baseline;
+}
+.sub1 p ,.sub2 p,.sub3 p{
+    margin: 10px;
+}
+
+.sub_1{
+    display: flex;
+    justify-content: space-around;
+}  
+.sub_1 img{
+    width: 40%;
+}
+.sub_2{
+    display: flex;
+    text-align: center;
+}
+.sub_22 img{
+    border: solid 2px #333;
+    box-shadow: 5px 5px 5px #a7a3a3;
+
+}
+.sub_22 img:hover{
+    box-shadow: 7px 7px 7px #5e5d5d;
+    transform: translateY(-5px);
+    transition-duration: 0.5s;
+  }
+
+.sub_22 p{
+    color: #6e8186;
+    font-size: x-small;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.sub_22 h4{
+    margin-top: 0;
+    margin-bottom: 5px;
+
+}
+
+.gnavi {
+    display: flex;
+    flex-wrap: wrap;
+    /*スマホ表示折り返し用なのでPCのみなら不要*/
+    margin: 0 0 50px 0;
+    list-style: none;
+}
+
+.gnavi li a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+.gnavi li {
+    margin-bottom: 20px;
+}
+
+/*==================================================
+　5-3-1 中心から外に線が伸びる（下部）
+===================================*/
+.gnavi li a {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover {
+    color: #0481A2;
+}
+
+.gnavi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #0481A2;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+.lead {
+    padding: 50px 20px;
+}
+
+footer {
+    background-color: #333;
+}
+footer ul{
+    justify-content: end;
+}
+footer ul li {
+    color: white;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+footer p{
+    color: white;
+    text-align: right;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+.border{
+    border-bottom: solid 1px white;
+}
+@media screen and (max-width: 960px){
+    #main {
+        display: block;
+    }
+    h1{
+        font-size: 50px;
+    }
+    #main img {
+        margin-right: 0;
+        margin-left: auto;
+        width: 70%;
+        height: auto; 
+    }
+        
+    ul li {
+        list-style-type: none;
+        margin: 5px;
+    }
+    .sub1,.sub2,.sub3{
+        display: block;
+        align-items: first baseline;
+    }
+    .sub_1{
+        display: block;
+    }  
+    .sub_2{
+        display: block;
+        text-align: center;
+    }
+    .sub_1 img{
+        width: 60%;
+    }
+    
+}
+@media screen and (max-width: 767px){
+    #main {
+        display: block;
+    }
+    h1{
+        font-size: 30px;
+    }
+    ul li {
+        list-style-type: none;
+        margin: 0;
+        font-size: 13px;
+    }
+    .sub1,.sub2,.sub3{
+        display: block;
+        align-items: first baseline;
+    }
+    .sub_1{
+        display: block;
+    }  
+    .sub_2{
+        display: block;
+        text-align: center;
+    }
+    .sub_1 img{
+        width: 55%;
+    }
+
+}
