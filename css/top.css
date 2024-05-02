@@ -1,0 +1,374 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+body {
+    color: #333;
+    font-family:nort, Yu Gothic UI, sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    margin-left: 40px;
+}
+
+ul {
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 20px 45px;
+    justify-content: space-between;
+    z-index: 30;
+    color: #333
+}
+
+/*nav繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ*/
+.gnavi li a{
+    padding:  0 0 3px;
+}
+.gnavi{
+    margin: 0;
+}
+.gnavi li.current a,
+.gnavi li a:hover{
+  color:#333;
+}
+
+.gnavi li a::after {
+    /*邨ｶ蟇ｾ驟咲ｽｮ縺ｧ邱壹�菴咲ｽｮ繧呈ｱｺ繧√ｋ*/
+    position: absolute;
+    bottom: 0;
+    /*邱壹�蠖｢迥ｶ*/
+    width: 75%;
+    height: 1px;
+    background:#333;
+    
+    /*繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ謖�ｮ�*/
+    transition: all .4s;
+    transform-origin: center top;/*荳企Κ荳ｭ螟ｮ蝓ｺ轤ｹ*/
+}
+
+/*迴ｾ蝨ｨ蝨ｰ縺ｨhover縺ｮ險ｭ螳�*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    transform: scale(1, 0.8);/*X譁ｹ蜷代↓繧ｹ繧ｱ繝ｼ繝ｫ諡｡螟ｧ*/
+}
+
+/*footer nav 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ*/
+.gnavi_footer li a{
+    padding:  0 0 3px;
+}
+
+.gnavi_footer li a{
+    position: relative;
+}
+
+.gnavi_footer li a::after {
+    content: '';
+    /*邨ｶ蟇ｾ驟咲ｽｮ縺ｧ邱壹�菴咲ｽｮ繧呈ｱｺ繧√ｋ*/
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    /*邱壹�蠖｢迥ｶ*/
+    width: 75%;
+    height: 1px;
+    background:#fff;
+
+    /*繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ謖�ｮ�*/
+    transition: all .4s;
+    transform: scale(0, 1);/*X譁ｹ蜷�0縲〆譁ｹ蜷�1*/
+    transform-origin: center top;/*荳企Κ荳ｭ螟ｮ蝓ｺ轤ｹ*/
+}
+
+/*迴ｾ蝨ｨ蝨ｰ縺ｨhover縺ｮ險ｭ螳�*/
+.gnavi_footer.current a::after,
+.gnavi_footer li a:hover::after {
+    transform: scale(1, 0.8);/*X譁ｹ蜷代↓繧ｹ繧ｱ繝ｼ繝ｫ諡｡螟ｧ*/
+}
+
+/*繧ｳ繝ｳ繝�Φ繝�ｹ�*/
+#bg {
+    padding: 0 10% 100px;
+}
+#abc{
+    margin: 0 10%;
+}
+
+/*蜷榊燕縺ｮ蜀咏悄*/
+#top img {
+    width: 55%;
+    margin: 0 auto;
+}
+#top {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+
+}
+
+h1 {
+    line-height: 1.5;
+    font-family: freight-big-pro, serif;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-size: 90px;
+    text-align: right;
+}
+
+h2 {
+    font-family: freight-big-pro, serif;
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+h4{
+    font-family: freight-big-pro, serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#particles-js {
+    position: fixed;
+    z-index: -1;
+    /*謠冗判繧剃ｸ逡ｪ荳九↓*/
+    width: 100%;
+    background-color: #fff;
+}
+
+#wrapper {
+    position: relative;
+    /*謠冗判繧�#particles-js繧医ｊ繧ゆｸ翫↓縺吶ｋ縺溘ａposition:relative;繧呈欠螳�*/
+    z-index: 1;
+    /*z-index縺ｮ謨ｰ蟄励ｒ螟ｧ縺阪￥縺吶ｋ縺薙→縺ｧ謠冗判繧�#particles-js繧医ｊ繧ゆｸ翫↓*/
+    width: 100%;
+    height: 30%;
+}
+
+#profile_img{
+    width: 300px;
+    height: 400px;
+}
+#profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+#profile_comment{
+    margin-top: 50px;
+}
+#my{
+    display: block;
+    width: 60%;
+}
+#myname{
+    margin-top: 50px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.more{
+    margin: 50px 0 0 auto;
+    padding: 4px 0;
+    width: 110px;
+    text-align: left;
+    font-size: 17px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+#pro_link{
+    display: flex;
+    justify-content: end;
+}
+#About_contans{
+    margin-bottom: 150px;
+    background-color: #8a8a8a;
+    padding: 9% 0;
+    color: #fff;
+}
+
+#main_visual {
+    background-color: #ffffff;
+    padding-bottom: 30px;
+}
+
+/*菴懷刀髮��蜀咏悄*/
+#work_img_contans img {
+    width: 335px;
+    height: auto;
+    padding: 4px 0;
+    margin: 0 7px;
+}
+
+#work_img_contans {
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#work_img_contans h4,p{
+    margin-left: 7px;
+}
+
+#dentis, #shark, #wedding, #shoes, #aqua, #zoo, #name, #haru{
+    margin: 15px 0;
+}
+
+#text_img {
+    color: rgb(181, 181, 181);
+}
+
+/*逕ｻ蜒上ｒ繝槭え繧ｹ繧ｪ繝ｼ繝舌�譎ゅ�繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ*/
+.mask img {
+    /*逕ｻ蜒乗僑螟ｧ*/
+    transform: scale(1);
+    transition: .35s ease-in-out;
+    /*遘ｻ繧雁､峨ｏ繧矩溘＆繧貞､画峩縺励◆縺��ｴ蜷医�縺薙�謨ｰ蛟､繧貞､画峩*/
+}
+
+.mask img:hover {
+    /*hover縺励◆譎ゅ�螟牙喧*/
+    transform: scale(1.05);
+    /*諡｡螟ｧ縺ｮ蛟､繧貞､画峩縺励◆縺��ｴ蜷医�縺薙�謨ｰ蛟､繧貞､画峩*/
+}
+
+/*縲逕ｻ蜒上�繝槭せ繧ｯ縲*/
+.mask {
+    display: block;
+    overflow: hidden;
+    /*諡｡螟ｧ縺励※縺ｯ縺ｿ蜃ｺ繧玖ｦ∫ｴ�繧帝國縺�*/
+}
+
+footer {
+    position: relative;
+    background-color: #333;
+    padding: 20px 20px 5px;
+
+}
+#all_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end
+}
+
+footer a {
+    color: #fff;
+    margin: 0 20px;
+}
+#mail{
+    text-align: center;
+    color: #fff;
+    margin: 50px 0;
+}
+#mail a{
+    margin-left: 0;
+    font-size: 20px;
+}
+#mail a:hover {
+    border-bottom: #fff 1.5px solid;
+    padding-bottom: 4px;
+}
+#footer_icon img{
+    position: relative;
+    left: 70px;
+    width: 90px;
+}
+#footer_nav{
+    margin-right: 20px;
+    display: flex;
+}
+#copy{
+    margin-top: 25px;
+    font-size: 12px;
+    color: #ebebeb;
+    text-align: center;
+}
+@media screen and (max-width: 960px){
+    body{
+        font-size: 0.9rem;
+
+    }
+    #ligi_img img{
+        width: 23px;
+    }
+    #profile{
+        display: block;
+    }
+    #my{
+        width: 100%;
+        justify-content: center;
+    }
+    #work_img_contans {
+        justify-content: center;
+    }
+    .media_box{
+        margin-bottom: 25px;
+    }  
+    #work_img_contans img {
+        width: 300px;
+    }
+    #top img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #ligi_img img{
+        width: 50px;
+    }
+
+    #work_img_contans img {
+        width: 100%;
+    } 
+    #profile_img{
+        width: 100%;
+    }
+    #myname{
+        margin-top: 30px;
+    }
+    #all_footer{
+        display: block;
+    }
+    #footer_nav{
+        justify-content: center;
+        margin-top: 40px;
+    }
+    #mail{
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    #mail a{
+        font-size: 17px;
+    }
+
+    .gnavi ul{
+        font-size: 10px;
+        flex-wrap: nowrap;
+        padding-left: 0;
+    }
+    .gnavi li{
+        margin: 0 5px;
+        padding-left: 0;
+    }
+nav{
+    width: 10%;
+}
+    
+}
